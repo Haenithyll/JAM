@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 12a4adb150273154da00d80fdee6e337
+=======
+guid: 1586a0e7c6776e545acc42211e566d37
+>>>>>>> b6e5a0e (Liste de carte; WIP UI en phase plateau)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
