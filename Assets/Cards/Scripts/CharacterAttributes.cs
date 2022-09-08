@@ -10,4 +10,13 @@ public class CharacterAttributes
     public SpriteRenderer CharacterSpriteRenderer;
     public int Life;
     public int MaxLife;
+    public int Armor;
+    public int MaxArmor;
+    public Teams Team;
+
+    public enum Teams
+    {
+        Player,
+        Enemy
+    }
 }

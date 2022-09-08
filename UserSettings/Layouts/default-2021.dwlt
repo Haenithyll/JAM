@@ -14,35 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 435
-    y: 337
-    width: 907
-    height: 608
-  m_ShowMode: 0
-  m_Title: Preferences
-  m_RootView: {fileID: 4}
-  m_MinSize: {x: 310, y: 221}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_Maximized: 0
---- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PixelRect:
-    serializedVersion: 2
     x: 0
     y: 43
     width: 1920
     height: 997
   m_ShowMode: 4
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   m_Title: Game
@@ -53,12 +30,15 @@ MonoBehaviour:
 >>>>>>> Art
 =======
   m_Title: Hierarchy
+=======
+  m_Title: Game
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_RootView: {fileID: 5}
 >>>>>>> fdc28b9 (Scripts: Setup)
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
---- !u!114 &3
+--- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,23 +48,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: PreferenceSettingsWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 907
-    height: 608
-  m_MinSize: {x: 310, y: 221}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_ActualView: {fileID: 15}
+    y: 661
+    width: 1920
+    height: 286
+  m_MinSize: {x: 230, y: 271}
+  m_MaxSize: {x: 10000, y: 10021}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 14}
+  - {fileID: 11}
   m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &4
+  m_LastSelected: 1
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,17 +78,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 3}
+  - {fileID: 7}
+  - {fileID: 2}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1920
+    height: 947
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 1
+  controlID: 139
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneHierarchyWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 907
-    height: 608
-  m_MinSize: {x: 310, y: 221}
-  m_MaxSize: {x: 4000, y: 4021}
-  vertical: 0
-  controlID: 401
+    width: 313
+    height: 661
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
+  m_Panes:
+  - {fileID: 12}
+  m_Selected: 0
+  m_LastSelected: 0
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -205,7 +213,7 @@ MonoBehaviour:
   - {fileID: 4}
 =======
   - {fileID: 6}
-  - {fileID: 7}
+  - {fileID: 3}
   - {fileID: 8}
 >>>>>>> Art
 =======
@@ -320,6 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 6}
   - {fileID: 9}
   - {fileID: 10}
@@ -330,20 +339,29 @@ MonoBehaviour:
   - {fileID: 11}
   - {fileID: 12}
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+  - {fileID: 4}
+  - {fileID: 10}
+  - {fileID: 9}
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 30
+    y: 0
     width: 1920
-    height: 947
-  m_MinSize: {x: 400, y: 200}
-  m_MaxSize: {x: 32384, y: 16192}
+    height: 661
+  m_MinSize: {x: 300, y: 100}
+  m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 49610
 --- !u!114 &6
 =======
   controlID: 33
+=======
+  controlID: 140
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -375,9 +393,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_Children:
 <<<<<<< HEAD
   - {fileID: 7}
@@ -386,10 +405,14 @@ MonoBehaviour:
   - {fileID: 13}
   - {fileID: 14}
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+  m_Children: []
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 1477
     y: 0
+<<<<<<< HEAD
     width: 1041
     height: 947
   m_MinSize: {x: 100, y: 200}
@@ -400,6 +423,17 @@ MonoBehaviour:
 --- !u!114 &7
 =======
   controlID: 25
+=======
+    width: 443
+    height: 661
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 13}
+  m_Panes:
+  - {fileID: 13}
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
 --- !u!114 &10
 >>>>>>> fdc28b9 (Scripts: Setup)
 MonoBehaviour:
@@ -411,11 +445,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 0
 <<<<<<< HEAD
@@ -520,14 +555,24 @@ MonoBehaviour:
 =======
     width: 308
     height: 947
+=======
+    x: 313
+    y: 0
+    width: 1164
+    height: 661
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
 >>>>>>> fdc28b9 (Scripts: Setup)
   m_Panes:
+<<<<<<< HEAD
+=======
+  - {fileID: 16}
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   - {fileID: 15}
   m_Selected: 0
-  m_LastSelected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -536,6 +581,7 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+<<<<<<< HEAD
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -668,54 +714,29 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+=======
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_EditorHideFlags: 0
-  m_Script: {fileID: 13855, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 310, y: 200}
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Preferences
-    m_Image: {fileID: -5712115415447495865, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Console
+    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 435
-    y: 337
-    width: 907
-    height: 587
+    x: 0
+    y: 734
+    width: 1920
+    height: 265
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_PosLeft: {x: 0, y: 0}
-  m_PosRight: {x: 0, y: 0}
-  m_Scope: 0
-  m_SplitterFlex: 0.2
-  m_SearchText: 
-  m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 71137e95
-    m_LastClickedID: -1786899599
-    m_ExpandedIDs: 2956c29689577ec100000000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
---- !u!114 &16
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -738,8 +759,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
+<<<<<<< HEAD
     width: 319
     height: 926
+=======
+    width: 312
+    height: 640
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -747,6 +773,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
       m_SelectedIDs: 72c1ffff
       m_LastClickedID: 0
@@ -756,6 +783,11 @@ MonoBehaviour:
       m_LastClickedID: -15410
       m_ExpandedIDs: 88cfffffcacfffff6ed0ffff46d3ffff
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+      m_SelectedIDs: 1ca5ffff
+      m_LastClickedID: -23268
+      m_ExpandedIDs: 523bffff703bffff9e57ffffd66dffff1e71ffff1a75ffff5c7affff9e9dffff029effffa8a7ffff08c6ffffacfaffff
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -771,7 +803,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 10}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -780,10 +812,14 @@ MonoBehaviour:
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: ee90423a4e4e8894d841b206a4a406f1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &12
 =======
 --- !u!114 &17
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+--- !u!114 &13
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -803,10 +839,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1484
     y: 73
     width: 435
     height: 926
+=======
+    x: 1477
+    y: 73
+    width: 442
+    height: 640
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -825,10 +868,14 @@ MonoBehaviour:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &13
 =======
 --- !u!114 &18
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+--- !u!114 &14
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -848,10 +895,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 320
     y: 704
     width: 1162
     height: 295
+=======
+    x: 0
+    y: 734
+    width: 1920
+    height: 265
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -870,21 +924,29 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Art/Material
 =======
     - Assets/Cards/Scripts
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+    - Assets/Cards
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Assets/Art/Material
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\abruyere\Documents\JAM
 =======
   - Assets/Cards/Scripts
+=======
+  - Assets/Cards
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jbillemont\Desktop\JamUnity\JAM
 >>>>>>> fdc28b9 (Scripts: Setup)
@@ -892,6 +954,7 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_SelectedIDs: 2c810000
     m_LastClickedID: 33068
@@ -901,6 +964,11 @@ MonoBehaviour:
     m_LastClickedID: 32848
     m_ExpandedIDs: 00000000fa7f0000fe7f000000ca9a3b
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+    m_SelectedIDs: e8580000
+    m_LastClickedID: 22760
+    m_ExpandedIDs: 00000000e4580000e858000000ca9a3b
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -928,7 +996,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000e458000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -956,7 +1024,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 
+    m_ExpandedInstanceIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -973,10 +1041,14 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 2}
 =======
       m_ClientGUIView: {fileID: 11}
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+      m_ClientGUIView: {fileID: 2}
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -992,8 +1064,12 @@ MonoBehaviour:
 --- !u!114 &14
 =======
   m_DirectoriesAreaWidth: 193
+<<<<<<< HEAD
 --- !u!114 &19
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+--- !u!114 &15
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1015,6 +1091,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
 <<<<<<< HEAD
     y: 390
@@ -1031,6 +1108,12 @@ MonoBehaviour:
     width: 906
     height: 322
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+    x: 313
+    y: 73
+    width: 1162
+    height: 640
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1043,6 +1126,7 @@ MonoBehaviour:
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TargetSize: {x: 1920, y: 1080}
 =======
   m_TargetSize: {x: 1162, y: 589}
@@ -1050,6 +1134,9 @@ MonoBehaviour:
 =======
   m_TargetSize: {x: 906, y: 301}
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+  m_TargetSize: {x: 1162, y: 619}
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1064,6 +1151,7 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     m_HBaseRangeMin: -960
@@ -1082,6 +1170,12 @@ MonoBehaviour:
     m_VBaseRangeMin: -150.5
     m_VBaseRangeMax: 150.5
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+    m_HBaseRangeMin: -581
+    m_HBaseRangeMax: 581
+    m_VBaseRangeMin: -309.5
+    m_VBaseRangeMax: 309.5
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1090,7 +1184,7 @@ MonoBehaviour:
     m_HSlider: 1
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1099,6 +1193,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       width: 1040
@@ -1117,12 +1212,19 @@ MonoBehaviour:
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 453, y: 150.5}
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+      width: 1162
+      height: 619
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 581, y: 309.5}
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       x: -959.9999
@@ -1150,11 +1252,21 @@ MonoBehaviour:
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 906, y: 322}
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+      x: -581
+      y: -309.5
+      width: 1162
+      height: 619
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1162, y: 640}
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &13
@@ -1164,6 +1276,9 @@ MonoBehaviour:
 =======
 --- !u!114 &20
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+--- !u!114 &16
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1183,6 +1298,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 320
     y: 73
 <<<<<<< HEAD
@@ -1197,6 +1313,12 @@ MonoBehaviour:
     width: 906
     height: 583
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+    x: 313
+    y: 73
+    width: 1162
+    height: 640
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1228,11 +1350,22 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
+      snapOffset: {x: 0, y: 26}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-transform-toolbar
+      index: 0
+      layout: 2
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
-      index: 0
+      index: 1
       layout: 1
     - dockPosition: 1
       containerId: overlay-toolbar__top
@@ -1243,19 +1376,8 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 1
       id: unity-search-toolbar
-      index: 1
+      index: 2
       layout: 1
-    - dockPosition: 0
-      containerId: overlay-container--left
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: unity-transform-toolbar
-      index: 0
-      layout: 2
     - dockPosition: 0
       containerId: overlay-container--right
       floating: 0
@@ -1393,11 +1515,12 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     m_Target: {x: 205.51259, y: -620.4486, z: -403.7318}
@@ -1413,6 +1536,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.2671534, y: 0.9913111, z: -0.01855112}
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+    m_Target: {x: 1.069328, y: 0.7471193, z: -4.993498}
+    speed: 2
+    m_Value: {x: 1.069328, y: 0.7471193, z: -4.993498}
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1441,17 +1569,17 @@ MonoBehaviour:
       m_Size: {x: 0, y: 0}
     yGrid:
       m_Fade:
-        m_Target: 0
+        m_Target: 1
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -1459,6 +1587,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     m_Target: {x: 0.1731221, y: 0.37806687, z: 0.07219768, w: -0.9065802}
@@ -1479,17 +1608,24 @@ MonoBehaviour:
 >>>>>>> Art
 =======
     m_Target: {x: 0, y: 0, z: 0, w: 1}
+=======
+    m_Target: {x: -0.15566456, y: 0.010961334, z: -0.0017275, w: -0.9877492}
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.15566432, y: 0.010961317, z: -0.0017274973, w: -0.98774767}
   m_Size:
-    m_Target: 9.994218
+    m_Target: 4.2235537
     speed: 2
+<<<<<<< HEAD
     m_Value: 9.994218
 >>>>>>> fdc28b9 (Scripts: Setup)
+=======
+    m_Value: 4.4225693
+>>>>>>> d776cd4 (Scripts: Avancées pioche)
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
