@@ -24,54 +24,54 @@ public class BoardManager : MonoBehaviour
 
     [SerializeField] private int _pathIndex;
     [SerializeField] private int _tileIndex;
-
-    [SerializeField] private Tile _previousTile;
-    [SerializeField] private Tile _currentTile;
-    [SerializeField] private Tile _nextTile;
-
-    [SerializeField] private GameObject _previousTileGO;
-    [SerializeField] private GameObject _currentTileGO;
-    [SerializeField] private GameObject _nextTileGO;
+    [SerializeField] private List<GameObject> _InstantiatedTiles;
 
     public void InitBoard(int pathIndex)
     {
+        _tileIndex = 0;
         _pathIndex = pathIndex;
         _currentPath = _PathList[_pathIndex];
-        _currentTile = _currentPath._TileList[0];
-        _nextTile = _currentPath._TileList[1];
 
         int index = 0;
         foreach (Tile tile in _currentPath._TileList)
         {
             float position = _board.GetComponent<RectTransform>().rect.height * (index - (1 + _currentPath._TileList.Count) / 2) / (_currentPath._TileList.Count + 2);
             if (index < _currentPath._TileList.Count - 1)
-                SetupNewTile(tile, position);
+                _InstantiatedTiles.Add(SetupNewTile(tile, position));
             else
-                SetupBossTile(tile, position);
+                _InstantiatedTiles.Add(SetupBossTile(tile, position));
             index++;
         }
     }
 
-    public void MoveForward()
-    {
-        _tileIndex++;
-        _previousTile = _currentTile;
-        _currentTile = _nextTile;
-    }
-
-    private void SetupNewTile(Tile tile, float position)
+    private GameObject SetupNewTile(Tile tile, float position)
     {
         GameObject tileInstance = Instantiate(tile.gameObject);
+
         tileInstance.transform.SetParent(_board.gameObject.transform);
         tileInstance.transform.localScale = new Vector3(.75f, .75f, .75f);
         tileInstance.transform.localPosition = new Vector3(0, position, 0);
+
+        return tileInstance;
     }
 
-    private void SetupBossTile(Tile tile, float position)
+    private GameObject SetupBossTile(Tile tile, float position)
     {
         GameObject tileInstance = Instantiate(tile.gameObject);
+
         tileInstance.transform.SetParent(_board.gameObject.transform);
         tileInstance.transform.localScale = new Vector3(1, 1, 1);
         tileInstance.transform.localPosition = new Vector3(0, 1.1f * position, 0);
+
+        return tileInstance;
+    }
+
+    public Vector3 GetDestinationTilePosition()
+    {
+        Vector3 positionToReturn = _InstantiatedTiles[_tileIndex].transform.position;
+        _tileIndex++;
+        if (_tileIndex == _currentPath._TileList.Count) 
+            GameManager.instance.QueueBoss();
+        return positionToReturn;
     }
 }
