@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class CardGameObject : MonoBehaviour
+public class CardGameObject : MonoBehaviour //
 {
     public CardData CardData { get => _card; }
     public Vector3 ShouldBePosition { get => _shouldBePosition; }
@@ -24,6 +24,7 @@ public class CardGameObject : MonoBehaviour
         transform.DOKill();
         transform.DORotate(new Vector3(0.0f, 0.0f, 0.0f), 0.5f).SetEase(Ease.OutCubic);
         transform.DOMove(destination, _moveDuration).SetEase(Ease.OutCubic);
+        transform.DORotateQuaternion(Quaternion.LookRotation(destination - Camera.main.transform.position), 0.5f);
         _shouldBePosition = destination;
     }
 
@@ -46,5 +47,10 @@ public class CardGameObject : MonoBehaviour
     public void LittleDance()
     {
         transform.DORotate(new Vector3(0.0f, 360.0f, 0.0f), 0.5f, RotateMode.FastBeyond360).SetEase(Ease.OutCubic);
+    }
+
+    void FaceCamera()
+    {
+        transform.DORotateQuaternion(Quaternion.LookRotation(transform.position - Camera.main.transform.position), 0.1f);
     }
 }
