@@ -28,7 +28,7 @@ public class CardGameObject : MonoBehaviour //
         transform.DOKill();
         transform.DORotate(new Vector3(0.0f, 0.0f, 0.0f), 0.5f).SetEase(Ease.OutCubic);
         transform.DOMove(destination, _moveDuration).SetEase(Ease.OutCubic);
-        transform.DORotateQuaternion(Quaternion.LookRotation(destination - Camera.main.transform.position, Camera.main.transform.up), 0.5f);
+        transform.DORotateQuaternion(Quaternion.LookRotation(Camera.main.transform.position - destination, Camera.main.transform.up), 0.5f);
         _shouldBePosition = destination;
     }
 
@@ -51,10 +51,5 @@ public class CardGameObject : MonoBehaviour //
     public void LittleDance()
     {
         transform.DORotate(new Vector3(0.0f, 360.0f, 0.0f), 0.5f, RotateMode.FastBeyond360).SetEase(Ease.OutCubic);
-    }
-
-    void FaceCamera()
-    {
-        transform.DORotateQuaternion(Quaternion.LookRotation(transform.position - Camera.main.transform.position), 0.1f);
     }
 }
