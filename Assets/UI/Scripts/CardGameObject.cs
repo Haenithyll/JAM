@@ -24,7 +24,7 @@ public class CardGameObject : MonoBehaviour //
         transform.DOKill();
         transform.DORotate(new Vector3(0.0f, 0.0f, 0.0f), 0.5f).SetEase(Ease.OutCubic);
         transform.DOMove(destination, _moveDuration).SetEase(Ease.OutCubic);
-        transform.DORotateQuaternion(Quaternion.LookRotation(destination - Camera.main.transform.position), 0.5f);
+        transform.DORotateQuaternion(Quaternion.LookRotation(destination - Camera.main.transform.position, Camera.main.transform.up), 0.5f);
         _shouldBePosition = destination;
     }
 
