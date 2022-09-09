@@ -18,7 +18,7 @@ public class BattleUtils : MonoBehaviour
         Instance = this;
     }
 
-    public void DamageUtil(int attackerId, int defenderId)
+    public void DamageUtil(int id)
     {
         
         

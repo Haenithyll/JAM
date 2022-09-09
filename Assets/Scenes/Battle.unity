@@ -237,9 +237,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 469845894226519085, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
+      propertyPath: enemyId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 469845894226519085, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
+      propertyPath: Attributes.Team
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 958489934381761804, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
+      propertyPath: enemyId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 958489934381761804, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
+      propertyPath: Attributes.Team
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2236010860860940541, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3534557707784881654, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
+      propertyPath: Attributes.Life
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3534557707784881654, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
+      propertyPath: Attributes.Team
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3534557707784881654, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
+      propertyPath: ListOfAbilities.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4338576794882175365, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
       propertyPath: m_RootOrder
@@ -285,6 +313,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4455751042442804264, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
+      propertyPath: enemyId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455751042442804264, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
+      propertyPath: Attributes.Team
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5051948590369624585, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
       propertyPath: m_Name
       value: Plateau
@@ -296,6 +332,14 @@ PrefabInstance:
     - target: {fileID: 6171601964407637863, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768705640300515907, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
+      propertyPath: enemyId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768705640300515907, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
+      propertyPath: Attributes.Team
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 835845cd27ead174a99e2fc85b1604ec, type: 3}
