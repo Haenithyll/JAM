@@ -10,7 +10,6 @@ public class Card
     public Color Color { get => _randomColor; }
     
     private Color _randomColor;
-
     public Card()
     {
         _randomColor = Random.ColorHSV(0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f);
