@@ -572,6 +572,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 602986275}
+  _TextList:
+  - Bonsoir.
+  - "Vous \xEAtes ?"
+  - Ah oui ! Le nouveau pion...
+  - "Hehem, je veux dire le nouveau d\xE9tenteur du BRACELET DU FUTUR, vous n'\xEAtes
+    pas un pion bien \xE9videmment\u2026"
+  - "Vous allez pouvoir jouer\u2026 non, plut\xF4t, vivre votre destin. Sur le plateau
+    ici pr\xE9sent, il est en bois d'acacia massif et il est collector."
+  - "Pour avancer dans votre propre destin et dans celui de votre descendance, vous
+    pouvez utiliser le\u2026 d\xE9 bleu DU DESTIN."
+  - "Il est tr\xE8s tr\xE8s bleu."
+  - "Vous pouvez \xE9galement g\xE9rer votre deck DU DESTIN en le regardant et en
+    modifiant sa composition pour vous pr\xE9parer aux horreurs du futur."
+  - "Beaucoup de cartes sont \xE0 votre disposition, et elles refl\xE8tent toutes,
+    ce que vous apprenez au fil de vos aventures."
+  - "Bien, j'esp\xE8re que vous \xEAtes pr\xEAt \xE0 me divert\u2026 \xE0 sauver
+    le futur jeune \xE9lu ! "
+  - 'Vous avez des questions ? '
+  - "\u2026."
+  - Qui suis- je ?
+  - "\u2026."
+  - Si vous pouviez imaginer que je suis Morgan Freeman cela serait parfait.
+  _Durations:
+  - 1
+  - 1
+  - 2
+  - 4
+  - 3
+  - 3
+  - 1
+  - 2
+  - 3
+  - 3
+  - 2
+  - 1
+  - 1
+  - 1
+  - 3
 --- !u!1 &495692395
 GameObject:
   m_ObjectHideFlags: 0
