@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -18,6 +19,6 @@ public class CharacterManager : MonoBehaviour
 
     public void MoveCharacter(Vector3 destinationPosition)
     {
-        _characterInstance.transform.position = new Vector3(0, destinationPosition.y, _startingPosition.z);
+        _characterInstance.transform.DOMove(new Vector3(0, destinationPosition.y, _startingPosition.z), 0.5f);
     }
 }
