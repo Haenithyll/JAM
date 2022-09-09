@@ -18,7 +18,8 @@ public class CardsManager : MonoBehaviour
     
     public void Start()
     {
-        PlayerData.GenerateCards(CardInHandsAtBeg); //TEMPORAIRE ?
+        if (PlayerData.Inventory.Count == 0 || PlayerData.Hand.Count == 0)
+            PlayerData.GenerateCards(CardInHandsAtBeg);
         SpawnAllCards();
         // for (int i = 0; i < CardInHandsAtBeg; i++)
         // {
