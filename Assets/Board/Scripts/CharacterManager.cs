@@ -47,15 +47,18 @@ public class CharacterManager : MonoBehaviour
                 _timer += Time.deltaTime;
                 _animTimer += Time.deltaTime;
 
-                if(_animTimer>_movingDuration / 10)
+                if (_animTimer > _movingDuration / 5)
                 {
                     _animTimer = 0f;
                     _spriteIndex++;
-                    _characterInstance.GetComponentInChildren<Image>().sprite = _CharacterSprites[_spriteIndex%3];
+                    _characterInstance.GetComponentInChildren<Image>().sprite = _CharacterSprites[(_spriteIndex % 2) + 1];
                 }
             }
             else
+            {
                 _characterMoving = false;
+                _characterInstance.GetComponentInChildren<Image>().sprite = _CharacterSprites[0];
+            }
         }
     }
 }
