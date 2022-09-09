@@ -37,7 +37,7 @@ public class CardList : MonoBehaviour
 
     private void Awake() // TEMPORAIRE
     {
-        __PlayerData.GenerateCards();
+        //PlayerData.GenerateCards();
     }
 
     private void Start()
@@ -97,7 +97,7 @@ public class CardList : MonoBehaviour
         Vector3 destinationPos;
         int cardRow = -1;
         int cardColumn = 0;
-        foreach (CardData c in __PlayerData.Inventory)
+        foreach (CardsAttributes c in PlayerData.Inventory)
         {
             cardRow++;
             if (cardRow > _cardsPerRowInventory-1)
@@ -117,7 +117,7 @@ public class CardList : MonoBehaviour
         _interactability++;
         int cardRow = -1;
         Vector3 destinationPos;
-        foreach (CardData c in __PlayerData.Hand)
+        foreach (CardsAttributes c in PlayerData.Hand)
         {
             cardRow++;
             if (_orientationHand == Orientation.Horizontal)
@@ -143,7 +143,7 @@ public class CardList : MonoBehaviour
         _interactability--;
     }
 
-    void InstantiateCard(CardData card, Vector3 destination)
+    void InstantiateCard(CardsAttributes card, Vector3 destination)
     {
         CardGameObject cardGO = Instantiate(_cardPrefab, _cardsSpawnpoint.position, Quaternion.identity).GetComponent<CardGameObject>();
         cardGO.Init(card);
@@ -158,7 +158,7 @@ public class CardList : MonoBehaviour
             _selectedCard = card;
             _selectedCard.LittleDance();
         }
-        else if (__PlayerData.SwapCards(_selectedCard.CardData, card.CardData))
+        else if (PlayerData.SwapCards(_selectedCard.Attributes, card.Attributes))
         {
             Vector3 pos1 = _selectedCard.ShouldBePosition;
             Vector3 pos2 = card.ShouldBePosition;
@@ -197,7 +197,7 @@ public class CardList : MonoBehaviour
         
         //Prévisu main
         cardRow = -1;
-        for (int i = 0; i < __PlayerData.MAX_CARDS_IN_HAND; i++)
+        for (int i = 0; i < PlayerData.MAX_CARDS_IN_HAND; i++)
         {
             cardRow++;
             if (_orientationHand == Orientation.Horizontal)

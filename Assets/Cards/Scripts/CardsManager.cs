@@ -4,23 +4,45 @@ using UnityEngine;
 
 public class CardsManager : MonoBehaviour
 {
-    public List<Card> Deck = new List<Card>();
+    public List<CardGameObject> Deck = new List<CardGameObject>();
     public int CardInHandsAtBeg;
+    [Header("References")]
     public GameObject PlayerManager;
+    public Transform CardsTf;
+    public Transform DeckTf;
+    public Transform HandTf;
+    [Header("Prefabs")]
+    public GameObject CardPrefab;
     
     public void Start()
     {
-        for (int i = 0; i < CardInHandsAtBeg; i++)
-        {
-            DrawCard();
-        }
+        PlayerData.GenerateCards(); //TEMPORAIRE
+        SpawnAllCards();
+        // for (int i = 0; i < CardInHandsAtBeg; i++)
+        // {
+        //     DrawCard();
+        // }
     }
 
+    void SpawnAllCards()
+    {
+        foreach (CardsAttributes attributes in PlayerData.Inventory)
+        {
+            CardGameObject cardGO = InstantiateCard(attributes, DeckTf.position, Quaternion.LookRotation(Vector3.back));
+        }
+        int cardNb = -1;
+        foreach (CardsAttributes attributes in PlayerData.Hand)
+        {
+            cardNb++;
+            CardGameObject cardGO = InstantiateCard(attributes, HandTf.position + Vector3.right * cardNb, Quaternion.LookRotation(Vector3.forward));
+        }
+    }
+    
     public void DrawCard()
     {
         if(Deck.Count >= 1)
         {
-            Card randomCard = Deck[Random.Range(0, Deck.Count)];
+            CardGameObject randomCard = Deck[Random.Range(0, Deck.Count)];
             randomCard.gameObject.SetActive(true);
             Deck.Remove(randomCard);
         }
@@ -40,4 +62,11 @@ public class CardsManager : MonoBehaviour
         }
     }
 
+    CardGameObject InstantiateCard(CardsAttributes attributes, Vector3 position, Quaternion rotation)
+    {
+        CardGameObject cardGO = Instantiate(CardPrefab, position, rotation, CardsTf).GetComponent<CardGameObject>();
+        cardGO.Init(attributes);
+        
+        return cardGO;
+    }
 }
