@@ -26,11 +26,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-<<<<<<< HEAD
-  controlID: 29314
-=======
-  controlID: 29117
->>>>>>> dev/psnauwaert/Character.Animation
+  controlID: 29902
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,11 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-<<<<<<< HEAD
-  controlID: 29245
-=======
-  controlID: 29118
->>>>>>> dev/psnauwaert/Character.Animation
+  controlID: 29903
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -568,11 +560,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-<<<<<<< HEAD
-      m_ExpandedIDs: ca6efeffc277feff2478feff5489feff529bfeffc49bfeff9ab2feff6a9cffff12afffff66afffff80b0ffffa0bdffffbcc7ffff10c8ffff2ac9ffff5cd3ffff34fbffff5a670000206c00003e6c0000
-=======
-      m_ExpandedIDs: 5489feff529bfeffc49bfeff9ab2feff6a9cffff12afffff66afffff80b0ffffa0bdffffbcc7ffff10c8ffff2ac9ffff5cd3ffff34fbffff5a670000206c00003e6c0000
->>>>>>> dev/psnauwaert/Character.Animation
+      m_ExpandedIDs: 326cfeffca6efeffc277feff2478feff5489feff529bfeffc49bfeff9ab2feff6a9cffff12afffff66afffff80b0ffffa0bdffffbcc7ffff10c8ffff2ac9ffff5cd3ffff34fbffff5a670000206c00003e6c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -663,22 +651,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Board/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Board/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jbillemont\Documents\JAM
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 085b0000
-    m_LastClickedID: 23304
-    m_ExpandedIDs: 00000000f05a0000f45a0000e8ae000000ca9a3bffffff7f
+    m_SelectedIDs: 045b0000
+    m_LastClickedID: 23300
+    m_ExpandedIDs: 00000000f05a0000f25a0000f45a0000e8ae000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -731,13 +719,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 6a6f0000
-    m_LastClickedInstanceID: 28522
-<<<<<<< HEAD
+    m_SelectedInstanceIDs: 9c110000
+    m_LastClickedInstanceID: 4508
     m_HadKeyboardFocusLastEvent: 1
-=======
-    m_HadKeyboardFocusLastEvent: 0
->>>>>>> dev/psnauwaert/Character.Animation
     m_ExpandedInstanceIDs: ee810000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -826,7 +810,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 28522
+  m_LastInspectedObjectInstanceID: 4508
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
