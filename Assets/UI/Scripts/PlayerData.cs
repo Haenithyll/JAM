@@ -12,7 +12,7 @@ public static class PlayerData
     public static List<CardsAttributes> Hand = new List<CardsAttributes>(MAX_CARDS_IN_HAND);
 
     public const int MAX_CARDS_IN_INVENTORY = 10;
-    public const int MAX_CARDS_IN_HAND = 5;
+    public const int MAX_CARDS_IN_HAND = 4;
 
     public static bool SwapCards(CardsAttributes card1, CardsAttributes card2)
     {
@@ -53,8 +53,15 @@ public static class PlayerData
         return true;
     }
 
+    public static void GenerateCards()
+    {
+        GenerateCards(MAX_CARDS_IN_HAND);
+    }
+    
     public static void GenerateCards(int handNumber)
     {
+        Inventory.Clear();
+        Hand.Clear();
         for (int i = 0; i < MAX_CARDS_IN_INVENTORY; i++)                   
         {                                              
             Inventory.Add(new CardsAttributes());

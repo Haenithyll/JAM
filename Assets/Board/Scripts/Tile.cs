@@ -17,34 +17,43 @@ public enum CustomEffect
 public class Tile : MonoBehaviour
 {
     [SerializeField] private CustomEffect _effect;
+    [SerializeField] private string _customText;
+
     public void DisplayText(TextMeshProUGUI textHolder)
     {
         string text;
 
-        switch (_effect)
+        if (_customText == string.Empty)
         {
-            case CustomEffect.None:
-                text = "Nothing Happens";
-                break;
-            case CustomEffect.Bonus_1HP:
-                text = "Bonus ! +1 HP";
-                break;
-            case CustomEffect.Bonus_1Card:
-                text = "Bonus ! +1 Card";
-                break;
-            case CustomEffect.Bonus_2Cards:
-                text = "Bonus ! +2 Cards";
-                break;
-            case CustomEffect.Malus_1Card:
-                text = "Malus ! -1 Card";
-                break;
-            case CustomEffect.Malus_1HP:
-                text = "Malus ! -1 HP";
-                break;
-            default:
-                text = "Nothing Happens!";
-                break;
+            switch (_effect)
+            {
+                case CustomEffect.None:
+                    text = "Nothing Happens";
+                    break;
+                case CustomEffect.Bonus_1HP:
+                    GameManager.instance.AddHealth();
+                    text = "Bonus ! +1 HP";
+                    break;
+                case CustomEffect.Bonus_1Card:
+                    text = "Bonus ! +1 Card";
+                    break;
+                case CustomEffect.Bonus_2Cards:
+                    text = "Bonus ! +2 Cards";
+                    break;
+                case CustomEffect.Malus_1Card:
+                    text = "Malus ! -1 Card";
+                    break;
+                case CustomEffect.Malus_1HP:
+                    GameManager.instance.RemoveHealth();
+                    text = "Malus ! -1 HP";
+                    break;
+                default:
+                    text = "Nothing Happens!";
+                    break;
+            }
         }
+        else
+            text = _customText;
 
         textHolder.text = text;
     }

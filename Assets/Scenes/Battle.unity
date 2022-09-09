@@ -794,7 +794,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  CardInHandsAtBeg: 5
+  CardInHandsAtBeg: 4
   SpaceBetweenHandsCards: 1
   PlayerManager: {fileID: 273281692}
   CardsTf: {fileID: 1248591338}

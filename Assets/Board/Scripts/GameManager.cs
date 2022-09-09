@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     private bool _sceneTransition;
     private bool _diceRolling;
     private bool _isMoving;
+    private bool _gameInitialized;
 
     private int _diceValue;
     private int _index;
@@ -46,19 +47,23 @@ public class GameManager : MonoBehaviour
         _sceneTransition = false;
         _diceRolling = false;
         _isMoving = false;
+        _gameInitialized = false;
 
         _BoardManager.InitBoard(0);
         _CharManager.InitCharacter();
         _HealthManager.Init();
+        _TextBoxManager.Init();
     }
 
     private void Update()
     {
-        if (_sceneTransition)
+        if (!_gameInitialized)
+            return;
+        else if (_sceneTransition)
         {
             if (_timer < _fadeTime)
                 _timer += Time.deltaTime;
-            else if(!CharacterManager.instance.characterMoving)
+            else if (!CharacterManager.instance.characterMoving)
                 SceneManager.LoadScene("Battle");
         }
         else if (_bossTile)
@@ -141,5 +146,19 @@ public class GameManager : MonoBehaviour
         _fadeTime = fadeTime;
         _timer = Time.deltaTime;
         _timer = 0f;
+    }
+
+    public void GameInitialized()
+    {
+        _gameInitialized = true;
+    }
+
+    public void AddHealth()
+    {
+        _HealthManager.AddHalfHeart();
+    }
+    public void RemoveHealth()
+    {
+        _HealthManager.RemoveHalfHeart();
     }
 }

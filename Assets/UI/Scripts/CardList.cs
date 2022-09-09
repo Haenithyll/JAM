@@ -37,7 +37,7 @@ public class CardList : MonoBehaviour
 
     private void Awake() // TEMPORAIRE
     {
-        //PlayerData.GenerateCards();
+        PlayerData.GenerateCards();
     }
 
     private void Start()

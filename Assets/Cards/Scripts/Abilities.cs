@@ -6,8 +6,7 @@ using UnityEngine;
 public class Abilities
 {
     public string Name;
-    public Sprite AbilitySprite;
-    public SpriteRenderer AbilitySpriteRenderer;
+    public Texture AbilitySprite;
     public int HpDamage;
     public int ArmorDamage;
     public bool Heal;
