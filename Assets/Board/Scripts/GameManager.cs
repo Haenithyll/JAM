@@ -152,4 +152,13 @@ public class GameManager : MonoBehaviour
     {
         _gameInitialized = true;
     }
+
+    public void AddHealth()
+    {
+        _HealthManager.AddHalfHeart();
+    }
+    public void RemoveHealth()
+    {
+        _HealthManager.RemoveHalfHeart();
+    }
 }

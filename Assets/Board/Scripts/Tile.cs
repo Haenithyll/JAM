@@ -31,6 +31,7 @@ public class Tile : MonoBehaviour
                     text = "Nothing Happens";
                     break;
                 case CustomEffect.Bonus_1HP:
+                    GameManager.instance.AddHealth();
                     text = "Bonus ! +1 HP";
                     break;
                 case CustomEffect.Bonus_1Card:
@@ -43,6 +44,7 @@ public class Tile : MonoBehaviour
                     text = "Malus ! -1 Card";
                     break;
                 case CustomEffect.Malus_1HP:
+                    GameManager.instance.RemoveHealth();
                     text = "Malus ! -1 HP";
                     break;
                 default:
