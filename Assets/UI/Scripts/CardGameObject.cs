@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class CardGameObject : MonoBehaviour
+public class CardGameObject : MonoBehaviour //
 {
     public CardData CardData { get => _card; }
     public Vector3 ShouldBePosition { get => _shouldBePosition; }
