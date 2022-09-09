@@ -13,6 +13,7 @@ public class CharacterAttributes
     public int Armor;
     public int MaxArmor;
     public Teams Team;
+    public int enemyId;
 
     public enum Teams
     {

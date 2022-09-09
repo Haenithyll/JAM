@@ -46,27 +46,26 @@ public class PlayerManager : MonoBehaviour
 
         if (State == States.EnemyPick)
         {
-           // CharacterList.GetComponent<CharactersList>()
-            State = States.EndTurn;
+            if (Input.GetMouseButtonDown(0))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Physics.Raycast(ray, out RaycastHit hit);
+                if (hit.transform != null && hit.transform.TryGetComponent<Enemy>(out Enemy attributes))
+                {
+                    CharacterAttributes.Teams team = attributes.Attributes.Team;
+                    if (gameObject.GetComponent<CharacterAttributes>().Team != team)
+                    {
+                        int enemyID = attributes.Attributes.enemyId;
+                        BattleUtils.Instance.DamageUtil(enemyID);
+                        State = States.EndTurn;
+                    }
+                }
+            }
         }
 
         if (State == States.EndTurn)
         {
-            CardsManager.GetComponent<CardsManager>().DrawCard();
-            State = States.EnemyTurn;
-        }
-    }
-
-    public void clickOnEnemy()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Physics.Raycast(ray, out RaycastHit hit);
-          //  if (hit.transform != null && hit.transform.TryGetComponent<CharactersList>(out CharactersList charactersList))
-            //{
-            //    int team = charactersList
-            //}
+            
         }
     }
 }
