@@ -53,13 +53,13 @@ public static class PlayerData
         return true;
     }
 
-    public static void GenerateCards()
+    public static void GenerateCards(int handNumber)
     {
         for (int i = 0; i < MAX_CARDS_IN_INVENTORY; i++)                   
         {                                              
             Inventory.Add(new CardsAttributes());
         }
-        for (int i = 0; i < MAX_CARDS_IN_HAND; i++)
+        for (int i = 0; i < handNumber; i++)
         {
             Hand.Add(new CardsAttributes());
         }

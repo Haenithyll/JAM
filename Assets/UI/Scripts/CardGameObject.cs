@@ -1,4 +1,5 @@
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public class CardGameObject : MonoBehaviour //
@@ -7,6 +8,7 @@ public class CardGameObject : MonoBehaviour //
     public Vector3 ShouldBePosition { get => _shouldBePosition; }
     
     [SerializeField] private MeshRenderer _pictureRenderer;
+    [SerializeField] private TMP_Text _descriptionText;
 
     private CardsAttributes _attributes;
     private Vector3 _shouldBePosition;
@@ -16,6 +18,9 @@ public class CardGameObject : MonoBehaviour //
     public void Init(CardsAttributes cardData)
     {
         _attributes = cardData;
+        if (cardData.CardImage != null)
+            _pictureRenderer.material.mainTexture = _attributes.CardImage;
+        _descriptionText.text = _attributes.CardText;
     }
 
     public void Move(Vector3 destination)

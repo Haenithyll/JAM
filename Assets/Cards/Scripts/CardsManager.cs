@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class CardsManager : MonoBehaviour
 {
     public List<CardGameObject> Deck = new List<CardGameObject>();
     public int CardInHandsAtBeg;
+    public int SpaceBetweenHandsCards;
     [Header("References")]
     public GameObject PlayerManager;
     public Transform CardsTf;
@@ -16,7 +18,7 @@ public class CardsManager : MonoBehaviour
     
     public void Start()
     {
-        PlayerData.GenerateCards(); //TEMPORAIRE
+        PlayerData.GenerateCards(CardInHandsAtBeg); //TEMPORAIRE ?
         SpawnAllCards();
         // for (int i = 0; i < CardInHandsAtBeg; i++)
         // {
@@ -26,15 +28,11 @@ public class CardsManager : MonoBehaviour
 
     void SpawnAllCards()
     {
-        foreach (CardsAttributes attributes in PlayerData.Inventory)
-        {
-            CardGameObject cardGO = InstantiateCard(attributes, DeckTf.position, Quaternion.LookRotation(Vector3.back));
-        }
         int cardNb = -1;
         foreach (CardsAttributes attributes in PlayerData.Hand)
         {
             cardNb++;
-            CardGameObject cardGO = InstantiateCard(attributes, HandTf.position + Vector3.right * cardNb, Quaternion.LookRotation(Vector3.forward));
+            CardGameObject cardGO = InstantiateCard(attributes, HandTf.position + Vector3.right * SpaceBetweenHandsCards * cardNb, HandTf.rotation);
         }
     }
     
