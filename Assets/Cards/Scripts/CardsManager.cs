@@ -25,4 +25,17 @@ public class CardsManager : MonoBehaviour
         }
     }
 
+    public void PickCard()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Physics.Raycast(ray, out RaycastHit hit);
+            if (hit.transform != null && hit.transform.TryGetComponent<Card>(out Card card))
+            {
+                int abilityIndex = card.Attributes.CardAbility;
+            }
+        }
+    }
+
 }
