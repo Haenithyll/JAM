@@ -8,15 +8,25 @@ public class BattleUtils : MonoBehaviour
     public static BattleUtils Instance;
     public GameObject PlayerManager;
     public GameObject EnemyManager;
+    public GameObject AbilitiesList;
+
+    int hpDamage;
+    int armorDamage;
 
     void Awake()
     {
         Instance = this;
     }
 
-    public void DamageUtils(string attackerName, string defenderName, int damage)
+    public void DamageUtil(int attackerId, int defenderId)
     {
         
         
+    }
+
+    public void ApplyAbilitiesUtil(int id)
+    {
+        hpDamage = AbilitiesList.GetComponent<AbilitiesList>().ListOfAbilities[id].HpDamage;
+        armorDamage = AbilitiesList.GetComponent<AbilitiesList>().ListOfAbilities[id].ArmorDamage;
     }
 }

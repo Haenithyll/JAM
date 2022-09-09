@@ -6,9 +6,9 @@ using UnityEngine;
 [System.Serializable]
 public class CardsAttributes
 {
-    public string AbilityName;
+    public Text CardName;
     public bool InHand;
-    public Button CardButton;
+    public int CardAbility;
     public Text CardText;
     public Sprite CardImage;
 }
