@@ -1815,10 +1815,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CardList
       objectReference: {fileID: 0}
-    - target: {fileID: 4024450338991512684, guid: 2fff2601ed5321647b70932212296111, type: 3}
-      propertyPath: _cardPrefab
-      value: 
-      objectReference: {fileID: 8254990529168406986, guid: a33d62f5abeb30f4d8982b65a8aee4e5, type: 3}
     - target: {fileID: 4024450338991512685, guid: 2fff2601ed5321647b70932212296111, type: 3}
       propertyPath: m_RootOrder
       value: 0

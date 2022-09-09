@@ -84,7 +84,7 @@ MonoBehaviour:
   _distanceBetweenCardsHand: {x: 2.7, y: 0}
   _distributeDelay: 0.2
   _putAwayDelay: 0.1
-  _cardPrefab: {fileID: 8919347668911469819, guid: 81eae85440acaf14d954b69d5527579e, type: 3}
+  _cardPrefab: {fileID: 8254990529168406986, guid: a33d62f5abeb30f4d8982b65a8aee4e5, type: 3}
   _inventory: {fileID: 4024450339499932977}
   _hand: {fileID: 4024450339478018408}
   _cardsSpawnpoint: {fileID: 4024450338557740419}
