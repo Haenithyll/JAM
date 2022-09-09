@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextBoxManager _TextBoxManager;
 
     [SerializeField] private CanvasGroup _Fade;
+    [SerializeField] private CanvasGroup _UI;
 
     [SerializeField] private List<Sprite> _DiceSprites;
     [SerializeField] private Sprite _defaultDiceSprite;
@@ -129,6 +130,7 @@ public class GameManager : MonoBehaviour
     private void FadeOut()
     {
         float fadeTime = 2f;
+        fadeTween = _UI.DOFade(0, .5f);
         fadeTween = _Fade.DOFade(1, fadeTime);
         QueueNextScene(fadeTime);
     }
