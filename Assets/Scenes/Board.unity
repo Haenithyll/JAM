@@ -626,7 +626,6 @@ MonoBehaviour:
   _BoardManager: {fileID: 455367752}
   _CharManager: {fileID: 455367755}
   _HealthManager: {fileID: 455367756}
-  _TextBoxManager: {fileID: 0}
   _Fade: {fileID: 631136204}
   _DiceSprites:
   - {fileID: 21300000, guid: bd6bc9ae4eaf19e44a0c4c5ee0bb5b3f, type: 3}
@@ -1406,7 +1405,7 @@ GameObject:
   - component: {fileID: 798815146}
   - component: {fileID: 798815145}
   m_Layer: 3
-  m_Name: Rambeau2
+  m_Name: rAMBEAU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
