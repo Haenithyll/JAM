@@ -69,7 +69,7 @@ public class BoardManager : MonoBehaviour
     public Vector3 GetDestinationTilePosition()
     {
         Vector3 positionToReturn = _InstantiatedTiles[_tileIndex].transform.position;
-        positionToReturn += new Vector3(0, _tileIndex*10, 0);
+        positionToReturn += new Vector3(0, _tileIndex*11, 0);
         _tileIndex++;
         if (_tileIndex == _currentPath._TileList.Count) 
             GameManager.instance.QueueBoss();
