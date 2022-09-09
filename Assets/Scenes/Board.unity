@@ -474,7 +474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _board: {fileID: 157039867}
   _PathList:
-  - {fileID: 362090720273441442, guid: c79427e38619c6d4caa0eba3f83315f2, type: 3}
+  - {fileID: 5828555387617972388, guid: 28ae90a4c5daf574984b574ddf176b85, type: 3}
   _currentPath: {fileID: 0}
   _pathIndex: 0
   _tileIndex: 0
