@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public enum TilePosition
 {
@@ -74,5 +75,10 @@ public class BoardManager : MonoBehaviour
         if (_tileIndex == _currentPath._TileList.Count) 
             GameManager.instance.QueueBoss();
         return positionToReturn;
+    }
+
+    public void DisplayText(TextMeshProUGUI textHolder)
+    {
+        _currentPath._TileList[_tileIndex-1].DisplayText(textHolder);
     }
 }

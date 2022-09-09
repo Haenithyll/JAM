@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private BoardManager _BoardManager;
     [SerializeField] private CharacterManager _CharManager;
     [SerializeField] private HealthBarManager _HealthManager;
+    [SerializeField] private TextBoxManager _TextBoxManager;
 
     [SerializeField] private CanvasGroup _Fade;
 
@@ -82,14 +83,21 @@ public class GameManager : MonoBehaviour
         }
         else if (_isMoving)
         {
-            Vector3 destinationPos = _BoardManager.GetDestinationTilePosition();
-            _CharManager.MoveCharacter(destinationPos);
+            if (_diceValue > 0)
+            {
+                Vector3 destinationPos = _BoardManager.GetDestinationTilePosition();
+                _CharManager.MoveCharacter(destinationPos);
+            }
+
             _diceValue--;
 
-            if (_diceValue == 0)
+            if (_diceValue < 1 && !CharacterManager.instance.characterMoving)
+            {
                 _isMoving = false;
+                _BoardManager.DisplayText(_TextBoxManager.textBox);
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && !CharacterManager.instance.characterMoving)
+        else if (Input.GetKeyDown(KeyCode.Space))
         {
             RollDice();
         }
