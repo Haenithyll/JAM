@@ -8,18 +8,18 @@ using UnityEngine;
 /// </summary>
 public static class __PlayerData
 {
-    public static List<Card> Inventory = new List<Card>();
-    public static List<Card> Hand = new List<Card>(MAX_CARDS_IN_HAND);
+    public static List<CardData> Inventory = new List<CardData>();
+    public static List<CardData> Hand = new List<CardData>(MAX_CARDS_IN_HAND);
 
     public const int MAX_CARDS_IN_INVENTORY = 10;
     public const int MAX_CARDS_IN_HAND = 5;
 
-    public static bool SwapCards(Card card1, Card card2)
+    public static bool SwapCards(CardData card1, CardData card2)
     {
         int i1 = -1;
         int i2 = -1;
-        List<Card> list1 = null;
-        List<Card> list2 = null;
+        List<CardData> list1 = null;
+        List<CardData> list2 = null;
         if (Inventory.Contains(card1))
         {
             list1 = Inventory;
@@ -57,11 +57,11 @@ public static class __PlayerData
     {
         for (int i = 0; i < MAX_CARDS_IN_INVENTORY; i++)                   
         {                                              
-            Inventory.Add(new Card());
+            Inventory.Add(new CardData());
         }
         for (int i = 0; i < MAX_CARDS_IN_HAND; i++)
         {
-            Hand.Add(new Card());
+            Hand.Add(new CardData());
         }
     }
 }

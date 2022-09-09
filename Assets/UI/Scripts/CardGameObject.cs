@@ -3,17 +3,17 @@ using UnityEngine;
 
 public class CardGameObject : MonoBehaviour
 {
-    public Card CardData { get => _card; }
+    public CardData CardData { get => _card; }
     public Vector3 ShouldBePosition { get => _shouldBePosition; }
     
     [SerializeField] private MeshRenderer _pictureRenderer;
 
-    private Card _card;
+    private CardData _card;
     private Vector3 _shouldBePosition;
     
     private readonly float _moveDuration = 0.8f;
 
-    public void Init(Card cardData)
+    public void Init(CardData cardData)
     {
         _card = cardData;
         _pictureRenderer.material.color = cardData.Color;

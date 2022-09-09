@@ -97,7 +97,7 @@ public class CardList : MonoBehaviour
         Vector3 destinationPos;
         int cardRow = -1;
         int cardColumn = 0;
-        foreach (Card c in __PlayerData.Inventory)
+        foreach (CardData c in __PlayerData.Inventory)
         {
             cardRow++;
             if (cardRow > _cardsPerRowInventory-1)
@@ -117,7 +117,7 @@ public class CardList : MonoBehaviour
         _interactability++;
         int cardRow = -1;
         Vector3 destinationPos;
-        foreach (Card c in __PlayerData.Hand)
+        foreach (CardData c in __PlayerData.Hand)
         {
             cardRow++;
             if (_orientationHand == Orientation.Horizontal)
@@ -143,7 +143,7 @@ public class CardList : MonoBehaviour
         _interactability--;
     }
 
-    void InstantiateCard(Card card, Vector3 destination)
+    void InstantiateCard(CardData card, Vector3 destination)
     {
         CardGameObject cardGO = Instantiate(_cardPrefab, _cardsSpawnpoint.position, Quaternion.identity).GetComponent<CardGameObject>();
         cardGO.Init(card);
