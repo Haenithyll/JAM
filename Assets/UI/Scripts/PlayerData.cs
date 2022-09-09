@@ -6,20 +6,20 @@ using UnityEngine;
 /// Structure de données pour toutes les cartes que le joueur possède.<br/>
 /// Placeholder par Nathan pour qu'il puisse faire les UI qui affiche des cartes, à remplacer par la version complète.
 /// </summary>
-public static class __PlayerData
+public static class PlayerData
 {
-    public static List<CardData> Inventory = new List<CardData>();
-    public static List<CardData> Hand = new List<CardData>(MAX_CARDS_IN_HAND);
+    public static List<CardsAttributes> Inventory = new List<CardsAttributes>();
+    public static List<CardsAttributes> Hand = new List<CardsAttributes>(MAX_CARDS_IN_HAND);
 
     public const int MAX_CARDS_IN_INVENTORY = 10;
     public const int MAX_CARDS_IN_HAND = 5;
 
-    public static bool SwapCards(CardData card1, CardData card2)
+    public static bool SwapCards(CardsAttributes card1, CardsAttributes card2)
     {
         int i1 = -1;
         int i2 = -1;
-        List<CardData> list1 = null;
-        List<CardData> list2 = null;
+        List<CardsAttributes> list1 = null;
+        List<CardsAttributes> list2 = null;
         if (Inventory.Contains(card1))
         {
             list1 = Inventory;
@@ -53,15 +53,15 @@ public static class __PlayerData
         return true;
     }
 
-    public static void GenerateCards()
+    public static void GenerateCards(int handNumber)
     {
         for (int i = 0; i < MAX_CARDS_IN_INVENTORY; i++)                   
         {                                              
-            Inventory.Add(new CardData());
+            Inventory.Add(new CardsAttributes());
         }
-        for (int i = 0; i < MAX_CARDS_IN_HAND; i++)
+        for (int i = 0; i < handNumber; i++)
         {
-            Hand.Add(new CardData());
+            Hand.Add(new CardsAttributes());
         }
     }
 }

@@ -6,9 +6,9 @@ using UnityEngine;
 [System.Serializable]
 public class CardsAttributes
 {
-    public Text CardName;
+    public string CardName;
     public bool InHand;
     public int CardAbility;
-    public Text CardText;
-    public Sprite CardImage;
+    public string CardText = "tape fort";
+    public Texture2D CardImage;
 }
