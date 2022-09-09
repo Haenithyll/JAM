@@ -6,13 +6,15 @@ using UnityEngine.UI;
 
 public class CharacterManager : MonoBehaviour
 {
+    public static CharacterManager instance;
+
     [SerializeField] private Canvas _prefab;
     [SerializeField] private Vector3 _startingPosition;
     [SerializeField] private List<Sprite> _CharacterSprites;
 
     [HideInInspector] public Vector3 destinationPosition;
 
-    private bool _characterMoving;
+    public bool characterMoving;
     private float _timer;
     private float _animTimer;
     private float _movingDuration;
@@ -22,9 +24,10 @@ public class CharacterManager : MonoBehaviour
     private GameObject _characterInstance;
     public void InitCharacter()
     {
+        instance = this;
         _characterInstance = Instantiate(_prefab.gameObject);
         _characterInstance.transform.position = _startingPosition;
-        _characterMoving = false;
+        characterMoving = false;
         _spriteIndex = 0;
     }
 
@@ -35,12 +38,12 @@ public class CharacterManager : MonoBehaviour
         _timer = Time.deltaTime;
         _timer = 0f;
         _animTimer = 0f;
-        _characterMoving = true;
+        characterMoving = true;
     }
 
     private void Update()
     {
-        if (_characterMoving)
+        if (characterMoving)
         {
             if (_timer < _movingDuration)
             {
@@ -56,7 +59,7 @@ public class CharacterManager : MonoBehaviour
             }
             else
             {
-                _characterMoving = false;
+                characterMoving = false;
                 _characterInstance.GetComponentInChildren<Image>().sprite = _CharacterSprites[0];
             }
         }
