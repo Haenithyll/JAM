@@ -6,6 +6,7 @@ public class CardsManager : MonoBehaviour
 {
     public List<Card> Deck = new List<Card>();
     public int CardInHandsAtBeg;
+    public GameObject PlayerManager;
     
     public void Start()
     {
@@ -34,6 +35,7 @@ public class CardsManager : MonoBehaviour
             if (hit.transform != null && hit.transform.TryGetComponent<Card>(out Card card))
             {
                 int abilityIndex = card.Attributes.CardAbility;
+                PlayerManager.GetComponent<PlayerManager>().hasPickedCard = true;
             }
         }
     }

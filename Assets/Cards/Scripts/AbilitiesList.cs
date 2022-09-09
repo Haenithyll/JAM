@@ -6,5 +6,5 @@ public class AbilitiesList : MonoBehaviour
 {
     public List<Abilities> ListOfAbilities = new List<Abilities>();
 
-
+    public List<AbilitySO> abilities;
 }

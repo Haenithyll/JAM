@@ -9,6 +9,8 @@ public class PlayerManager : MonoBehaviour
     public GameObject CardsManager;
     public GameObject CharacterList;
     public Player Player;
+    [HideInInspector] public bool hasPickedCard = false;
+    [HideInInspector] public bool hasPickedEnemy = false;
 
     public enum States
     {
@@ -22,7 +24,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        State = States.Draw;
+        State = States.CardPick;
     }
 
     // Update is called once per frame
@@ -38,7 +40,8 @@ public class PlayerManager : MonoBehaviour
         {
             if(Input.GetMouseButtonDown(0))
                 CardsManager.GetComponent<CardsManager>().PickCard();
-            State = States.EnemyPick;
+            if (hasPickedCard == true)
+                State = States.EnemyPick;
         }
 
         if (State == States.EnemyPick)
